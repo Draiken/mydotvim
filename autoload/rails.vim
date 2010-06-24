@@ -4112,17 +4112,19 @@ function! s:BufAbbreviations()
       Rabbrev rl( render :layout\ =>\ 
       Rabbrev rp( render :partial\ =>\ 
       Rabbrev rt( render :text\ =>\ 
-      Rabbrev rx( render :xml\ =>\ 
+      Rabbrev rx( render :xml\ =>\
     endif
     if t =~ '^\%(view\|helper\)\>'
       Rabbrev dotiw distance_of_time_in_words
       Rabbrev taiw  time_ago_in_words
+		  Rabbrev cac <%-\ cache\ \"\"\ do\ -%>
     endif
     if t =~ '^controller\>'
       Rabbrev re(  redirect_to
       Rabbrev rea( redirect_to :action\ =>\ 
       Rabbrev rec( redirect_to :controller\ =>\ 
       Rabbrev rst( respond_to
+      Rabbrev wfe when_fragment_expired\ \"\"\ do	 
     endif
     if t =~ '^model-arb\>' || t =~ '^model$'
       Rabbrev bt(    belongs_to
