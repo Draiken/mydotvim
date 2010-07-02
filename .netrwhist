@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/felipe/projects/rails/minhaserie/app/views/layouts'
-let g:netrw_dirhist_2='/home/felipe/projects/rails/minhaserie/app/views/rss'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/felipe/projects/rails/minhaserie/app/views/comments'
+let g:netrw_dirhist_2='/home/felipe/projects/rails/minhaserie/app/views/artists'
+let g:netrw_dirhist_3='/home/felipe/projects/rails/minhaserie/app/views/comments'
+let g:netrw_dirhist_4='/home/felipe/projects/rails/minhaserie/app/views/episodes'
+let g:netrw_dirhist_5='/home/felipe/projects/rails/minhaserie/app/views/comments'
+let g:netrw_dirhist_6='/home/felipe/projects/rails/minhaserie/app/views/shows'
+let g:netrw_dirhist_7='/home/felipe/projects/rails/minhaserie/app/views/show_images'
+let g:netrw_dirhist_8='/home/felipe/projects/rails/minhaserie/app/views/layouts'
+let g:netrw_dirhist_9='/home/felipe/projects/rails/minhaserie/app/views/shows'
