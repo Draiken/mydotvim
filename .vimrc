@@ -1,12 +1,17 @@
-:map /tr i<%= t '' %><Left><Left><Left><Left>
-:map /erb i<% %><Left><Left><Left>
-:map <F5> <ESC>gg=G
-:map /wfe i<R><ESC><UP>i_when_fragment_expired "#{I18n.locale.to_s}", (DateTime.tomorrow+2.hours).utc do<ESC><UP><TAB>i
+map /tr i<%= t '' %><Left><Left><Left><Left>
+map /erb i<% %><Left><Left><Left>
+map <F5> <ESC>gg=G
+map /wfe i<R><ESC><UP>i_when_fragment_expired "#{I18n.locale.to_s}", (DateTime.tomorrow+2.hours).utc do<ESC><UP><TAB>i
+map <F9> :NERDTree<CR>
 
-:set ts=2
-:set backupdir=/home/felipe/backup/vim
+" , #perl # comments
+map ,# :s/^/#/<CR>
 
-:set dir=/home/felipe/backup/vim/,/tmp/
+set sw=2
+set ts=2
+set backupdir=$HOME/backup/vim
+
+set dir=$HOME/backup/vim/,/tmp/
 
 set smarttab
 set clipboard+=unnamed " Yanks go on clipboard instead.
@@ -14,6 +19,10 @@ set showmatch " Show matching braces.
 set smartcase
 set cursorline 
 
+map <S-Enter> O<Esc>
+map <CR> o<Esc>
+
+filetype plugin on
 filetype plugin indent on
 ":hi Define term=bold ctermfg=3
 ":colorscheme ir_black
@@ -21,3 +30,4 @@ let g:molokai_original = 1
 set t_Co=256
 
 colorscheme molokai
+set viminfo=%,'50,\"100,n~/.viminfo
