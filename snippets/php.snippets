@@ -12,6 +12,55 @@ snippet req
 	require '${1:file}';${2}
 snippet req1
 	require_once '${1:file}';${2}
+snippet reqc
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/${1}Class.php';
+	${2}
+snippet reqcon
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/php/conexao.php';
+	${1}
+snippet eq
+	$query = "${1}";
+
+	${2:$rs = }DataBase::execQuery($query);
+	${3}
+snippet elq
+	$query = " SELECT SQL_CALC_FOUND_ROWS
+						 	${1}";
+
+	$rs = DataBase::execListQuery($query, $pagination);
+
+	$${2:} = array();
+
+	while($row = mysql_fetch_object($rs)) {
+
+		$${3:} = new ${4}();
+		${5}
+
+		$$2[] = $$3;
+
+	}
+
+	return $$2;
+snippet sa
+	$smarty->assign("${1}", $${2});
+snippet pr
+	print_r(${1});
+snippet pf
+	public function ${1}(${2}) {
+		${3}
+	}
+snippet prf
+	private function ${1}(${2}) {
+		${3}
+	}
+snippet psf
+	public static function ${1}(${2}) {
+		${3}
+	}
+snippet prsf
+	private static function ${1}(${2}) {
+		${3}
+	}
 # $GLOBALS['...']
 snippet globals
 	$GLOBALS['${1:variable}']${2: = }${3:something}${4:;}${5}
