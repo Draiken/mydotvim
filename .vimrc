@@ -7,6 +7,7 @@ map <F6> <ESC>:%s/<C-V><C-M>//g<CR>
 
 " , #perl # comments
 map ,# :s/^/#/<CR>
+map ,/ :s/^/\/\//<CR>
 
 set sw=2
 set ts=2
@@ -42,5 +43,3 @@ colorscheme railscasts
 set viminfo=%,'50,\"100,n~/.viminfo
 
 au BufRead,BufNewFile *.tpl set filetype=smarty
-
-command T edit smarty/%:p/templates/%:h

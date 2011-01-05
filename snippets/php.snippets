@@ -13,8 +13,7 @@ snippet req
 snippet req1
 	require_once '${1:file}';${2}
 snippet reqc
-	require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/${1}Class.php';
-	${2}
+	require_once $_SERVER['DOCUMENT_ROOT'] . '/classes/${1}Class.php';${2}
 snippet reqcon
 	require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/php/conexao.php';
 	${1}
@@ -44,7 +43,7 @@ snippet elq
 snippet sa
 	$smarty->assign("${1}", $${2});
 snippet pr
-	print_r(${1});
+	print_r(${1});{$2}
 snippet pf
 	public function ${1}(${2}) {
 		${3}
